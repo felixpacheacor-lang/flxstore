@@ -156,3 +156,18 @@ FLX STORE
 
 );
         }
+<a
+  href="https://wa.me/5511991217277"
+  target="_blank"
+  style={{
+    position: "fixed",
+    bottom: "20px",
+    right: "20px",
+    background: "green",
+    color: "#fff",
+    padding: "15px",
+    borderRadius: "50%"
+  }}
+>
+  WhatsApp
+</a>
