@@ -1,30 +1,20 @@
-export default function ProductCard({
-  nome,
-  preco,
-  imagem,
-}) {
-  return (
-    <div
-      style={{
-        background: "#fff",
-        borderRadius: "12px",
-        padding: "15px",
-        textAlign: "center",
-        boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
-        transition: "0.3s",
-      }}
-    >
-      <img
-        src={imagem}
-        alt={nome}
-        style={{
-          width: "100%",
-          maxWidth: "200px",
-          height: "200px",
-          objectFit: "cover",
-        }}
-      />
-
       <h3>{nome}</h3>
+      <p style={{ color: "#0057D9", fontSize: "22px", fontWeight: "bold" }}>
+        R$ {preco}
+      </p>
 
-     
+      <button
+        style={{
+          background: "#0057D9",
+          color: "#fff",
+          border: "none",
+          padding: "10px 20px",
+          borderRadius: "8px",
+          cursor: "pointer",
+        }}
+      >
+        Comprar
+      </button>
+    </div>
+  );
+}
