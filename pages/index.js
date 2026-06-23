@@ -1,74 +1,123 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <div
-      style={{
-        background: "#f5f8ff",
-        minHeight: "100vh",
-        fontFamily: "Arial",
-      }}
-    >
+    <div style={{ background: "#f4f7fc", minHeight: "100vh" }}>
+
+      {/* Cabeçalho */}
       <header
         style={{
           background: "#0057D9",
           color: "#fff",
-          padding: "20px",
+          padding: "15px 25px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
         }}
       >
-        <h1>FLX Store</h1>
+        <h1 style={{ margin: 0 }}>FLX Store</h1>
 
-        <nav>
-          <a href="/" style={{ color: "#fff", marginRight: "15px" }}>
-            Início
-          </a>
-          <a href="/produtos" style={{ color: "#fff", marginRight: "15px" }}>
-            Produtos
-          </a>
-          <a href="/afiliados" style={{ color: "#fff", marginRight: "15px" }}>
-            Afiliados
-          </a>
-          <a href="/sobre" style={{ color: "#fff", marginRight: "15px" }}>
-            Sobre
-          </a>
-          <a href="/contato" style={{ color: "#fff" }}>
-            Contato
-          </a>
-        </nav>
-      </header>
-
-      <main style={{ padding: "30px" }}>
-        <h2>Destaques</h2>
-
-        <div
+        <input
+          type="text"
+          placeholder="Pesquisar produtos..."
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
-            gap: "20px",
+            width: "40%",
+            minWidth: "220px",
+            padding: "10px",
+            borderRadius: "8px",
+            border: "none",
           }}
-        >
-          <div
+        />
+
+        <div>
+          <button
             style={{
-              background: "#fff",
-              borderRadius: "10px",
-              padding: "15px",
-              textAlign: "center",
-              boxShadow: "0 2px 10px rgba(0,0,0,.1)",
+              marginRight: "10px",
+              padding: "10px 15px",
+              borderRadius: "8px",
+              border: "none",
+              cursor: "pointer",
             }}
           >
-            <img
-              src="https://via.placeholder.com/200"
-              width="200"
-              alt="Produto"
-            />
-            <h3>Produto 1</h3>
-            <h2>R$ 99,90</h2>
-            <button>Comprar</button>
-          </div>
+            Entrar
+          </button>
+
+          <button
+            style={{
+              padding: "10px 15px",
+              borderRadius: "8px",
+              border: "none",
+              cursor: "pointer",
+              background: "#FFD700",
+            }}
+          >
+            🛒 Carrinho
+          </button>
         </div>
-      </main>
-    </div>
-  );
-}
+      </header>
+
+      {/* Menu */}
+      <nav
+        style={{
+          background: "#003f9e",
+          padding: "12px",
+          display: "flex",
+          justifyContent: "center",
+          gap: "25px",
+          flexWrap: "wrap",
+        }}
+      >
+        <Link href="/" style={{ color: "#fff", textDecoration: "none" }}>
+          Início
+        </Link>
+
+        <Link href="/produtos" style={{ color: "#fff", textDecoration: "none" }}>
+          Produtos
+        </Link>
+
+        <Link href="/afiliados" style={{ color: "#fff", textDecoration: "none" }}>
+          Afiliados
+        </Link>
+
+        <Link href="/sobre" style={{ color: "#fff", textDecoration: "none" }}>
+          Sobre
+        </Link>
+
+        <Link href="/contato" style={{ color: "#fff", textDecoration: "none" }}>
+          Contato
+        </Link>
+      </nav>
+
+      {/* Banner */}
+      <section
+        style={{
+          margin: "30px",
+          background: "linear-gradient(90deg,#0057D9,#00A3FF)",
+          color: "#fff",
+          padding: "50px",
+          borderRadius: "15px",
+          textAlign: "center",
+        }}
+      >
+        <h1 style={{ fontSize: "42px" }}>
+          Bem-vindo à FLX Store
+        </h1>
+
+        <p style={{ fontSize: "22px" }}>
+          Tecnologia, eletrônicos, moda, casa, esportes e muito mais.
+        </p>
+
+        <button
+          style={{
+            padding: "15px 35px",
+            fontSize: "18px",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+            background: "#FFD700",
+          }}
+        >
+          Ver Ofertas
+        </button>
+      </section>
