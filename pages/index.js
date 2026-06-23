@@ -1,104 +1,43 @@
 export default function Home() {
   return (
-    <div
-      style={{
-        fontFamily: "Arial, sans-serif",
-        background: "#f5f5f5",
-        minHeight: "100vh",
-      }}
-    >
-      <header
-        style={{
-          background: "#000",
-          color: "#fff",
-          padding: "50px 20px",
-          textAlign: "center",
-        }}
-      >
-        <h1>FLX Store</h1>
-        <p>As melhores ofertas da internet em um só lugar</p>
-      </header>
+    <div style={{ fontFamily: "Arial", padding: "20px" }}>
+      <h1>FLX Store</h1>
 
-      <section style={{ padding: "20px" }}>
-        <h2>🔥 Produtos em Destaque</h2>
+      <p>
+        Sua central de ofertas, eletrônicos, esportes, academia e
+        eletrodomésticos.
+      </p>
 
-        <div
-          style={{
-            background: "#fff",
-            padding: "20px",
-            borderRadius: "12px",
-            marginTop: "15px",
-          }}
-        >
-          <h3>Produto 1</h3>
-          <p>Descrição do produto.</p>
+      <h2>Categorias</h2>
 
-          <a
-            href="#"
-            style={{
-              background: "#000",
-              color: "#fff",
-              padding: "10px 15px",
-              textDecoration: "none",
-              borderRadius: "8px",
-            }}
-          >
-            Comprar Agora
-          </a>
-        </div>
+      <ul>
+        <li>🏋️ Roupas de Academia</li>
+        <li>🥤 Suplementos</li>
+        <li>⚽ Esportes</li>
+        <li>📱 Celulares</li>
+        <li>🎧 Fones Bluetooth</li>
+        <li>🔌 Carregadores</li>
+        <li>💾 Pen Drives</li>
+        <li>🏠 Eletrodomésticos</li>
+      </ul>
 
-        <div
-          style={{
-            background: "#fff",
-            padding: "20px",
-            borderRadius: "12px",
-            marginTop: "15px",
-          }}
-        >
-          <h3>Produto 2</h3>
-          <p>Descrição do produto.</p>
+      <hr />
 
-          <a
-            href="#"
-            style={{
-              background: "#000",
-              color: "#fff",
-              padding: "10px 15px",
-              textDecoration: "none",
-              borderRadius: "8px",
-            }}
-          >
-            Comprar Agora
-          </a>
-        </div>
-      </section>
+      <p>
+        <a href="/produtos">Ver Produtos</a>
+      </p>
 
-      <section style={{ padding: "20px" }}>
-        <h2>Contato</h2>
+      <p>
+        <a href="/afiliados">Torne-se um Afiliado</a>
+      </p>
 
-        <p>WhatsApp: (11) 99121-7277</p>
-        <p>E-mail: felixpacheacor@gmail.com</p>
-      </section>
+      <p>
+        <a href="/contato">Contato</a>
+      </p>
 
-      <a
-        href="https://wa.me/5511991217277"
-        target="_blank"
-        rel="noreferrer"
-        style={{
-          position: "fixed",
-          bottom: "20px",
-          right: "20px",
-          background: "#25D366",
-          color: "#fff",
-          padding: "15px",
-          borderRadius: "50%",
-          textDecoration: "none",
-          fontSize: "24px",
-        }}
-      >
-        💬
-      </a>
+      <p>
+        <a href="/sobre">Sobre Nós</a>
+      </p>
     </div>
   );
 }
-    
