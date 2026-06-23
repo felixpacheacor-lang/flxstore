@@ -1,43 +1,67 @@
 export default function Home() {
   return (
-    <div style={{ fontFamily: "Arial", padding: "20px" }}>
-      <h1>FLX Store</h1>
+    <div style={{ fontFamily: "Arial" }}>
+      <header
+        style={{
+          background: "#000",
+          color: "#fff",
+          padding: "15px",
+          textAlign: "center"
+        }}
+      >
+        <h1>FLX Store</h1>
+      </header>
 
-      <p>
-        Sua central de ofertas, eletrônicos, esportes, academia e
-        eletrodomésticos.
-      </p>
+      <section
+        style={{
+          padding: "40px",
+          textAlign: "center",
+          background: "#f2f2f2"
+        }}
+      >
+        <h2>As Melhores Ofertas da Internet</h2>
+        <p>
+          Academia, esportes, eletrônicos, celulares e muito mais.
+        </p>
+      </section>
 
-      <h2>Categorias</h2>
+      <section style={{ padding: "20px" }}>
+        <h2>Categorias</h2>
 
-      <ul>
-        <li>🏋️ Roupas de Academia</li>
-        <li>🥤 Suplementos</li>
-        <li>⚽ Esportes</li>
-        <li>📱 Celulares</li>
-        <li>🎧 Fones Bluetooth</li>
-        <li>🔌 Carregadores</li>
-        <li>💾 Pen Drives</li>
-        <li>🏠 Eletrodomésticos</li>
-      </ul>
+        <ul>
+          <li>🏋️ Academia</li>
+          <li>⚽ Esportes</li>
+          <li>📱 Celulares</li>
+          <li>🎧 Fones</li>
+          <li>🔌 Carregadores</li>
+          <li>🏠 Eletrodomésticos</li>
+        </ul>
+      </section>
 
-      <hr />
+      <section style={{ padding: "20px" }}>
+        <h2>Ganhe Dinheiro com a FLX Store</h2>
 
-      <p>
-        <a href="/produtos">Ver Produtos</a>
-      </p>
+        <p>
+          Cadastre-se como afiliado e divulgue nossos produtos.
+        </p>
 
-      <p>
-        <a href="/afiliados">Torne-se um Afiliado</a>
-      </p>
+        <a href="/afiliados">
+          Tornar-se Afiliado
+        </a>
+      </section>
 
-      <p>
-        <a href="/contato">Contato</a>
-      </p>
-
-      <p>
-        <a href="/sobre">Sobre Nós</a>
-      </p>
+      <footer
+        style={{
+          background: "#000",
+          color: "#fff",
+          padding: "20px",
+          textAlign: "center"
+        }}
+      >
+        WhatsApp: (11) 99121-7277
+        <br />
+        E-mail: felixpacheacor@gmail.com
+      </footer>
     </div>
   );
 }
