@@ -1,4 +1,4 @@
-# FLX Store
+# flxstore-site
 
 Loja virtual desenvolvida com **Next.js**, focada em produtos de academia, esportes, eletrônicos, celulares e muito mais.
 
