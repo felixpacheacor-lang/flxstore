@@ -1,7 +1,30 @@
 import '../estilos/global.css';
 import Header from '../compartimentos/Header';
+import Rodape from '../compartimentos/Rodape';
+import CartaoProduto from '../compartimentos/CartaoProduto';
 
 export default function Home() {
+  const produtos = [
+    {
+      id: 1,
+      nome: "Smartwatch Premium",
+      preco: 199.90,
+      imagem: "https://via.placeholder.com/250?text=Smartwatch"
+    },
+    {
+      id: 2,
+      nome: "Fone Bluetooth",
+      preco: 149.90,
+      imagem: "https://via.placeholder.com/250?text=Fone+Bluetooth"
+    },
+    {
+      id: 3,
+      nome: "Caixa de Som Bluetooth",
+      preco: 299.90,
+      imagem: "https://via.placeholder.com/250?text=Caixa+de+Som"
+    }
+  ];
+
   return (
     <div>
       <Header />
@@ -14,46 +37,19 @@ export default function Home() {
         </section>
 
         <section>
-          <h2 style={{ fontSize: '1.6rem', marginBottom: '2rem' }}>Destaques</h2>
+          <h2 style={{ fontSize: '1.6rem', marginBottom: '2rem' }}>Produtos em Destaque</h2>
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
             gap: '2rem'
           }}>
-            <div style={cardStyle}>
-              <p style={{ fontSize: '4rem', opacity: 0.6 }}>🖼️</p>
-              <h3>Produto 1</h3>
-              <p style={precoStyle}>R$ 99,90</p>
-              <button style={botaoStyle}>Comprar</button>
-            </div>
+            {produtos.map(produto => (
+              <CartaoProduto key={produto.id} {...produto} />
+            ))}
           </div>
         </section>
       </main>
+      <Rodape />
     </div>
   );
 }
-
-const cardStyle = {
-  border: '1px solid #e9ecef',
-  borderRadius: '8px',
-  padding: '1.5rem',
-  textAlign: 'center',
-  boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
-};
-
-const precoStyle = {
-  fontSize: '1.5rem',
-  fontWeight: 'bold',
-  margin: '1rem 0',
-  color: '#0052cc'
-};
-
-const botaoStyle = {
-  backgroundColor: '#ffc107',
-  border: 'none',
-  padding: '0.7rem 1.5rem',
-  borderRadius: '4px',
-  fontWeight: 'bold',
-  cursor: 'pointer',
-  width: '100%'
-};
